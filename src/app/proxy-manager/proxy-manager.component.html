@@ -1,0 +1,10 @@
+<mat-card *ngIf="proxyManager != null">
+  <mat-card-header>
+    <mat-card-title>{{this.proxyManager.id}} - {{this.proxyManager.ip}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-title>
+    <mat-card-content>
+      {{this.proxyManager.openPorts}}
+    </mat-card-content>
+  </mat-card-title>
+</mat-card>

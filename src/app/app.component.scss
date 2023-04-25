@@ -1,0 +1,39 @@
+
+:host{
+  display: flex;
+  min-height: 100%;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+}
+
+mat-drawer{
+  padding: 1rem;
+  & a{
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--button-shadow);
+    transition: all 0.5s;
+    color: black;
+    text-decoration: none;
+  }
+  & a:hover{
+    transform: scale(1.1);
+  }
+}
+
+mat-drawer-container{
+  width: 100%;
+}
+
+mat-nav-list{
+  display: flex;
+  flex-direction: column;
+}
+
+a{
+  background-color: white;
+}

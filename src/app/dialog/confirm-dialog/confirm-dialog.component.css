@@ -1,0 +1,9 @@
+:host{
+  background-color: var(--mdc-theme-surface, #424242);
+  //background-color: white;
+  border-radius: 1rem;
+  width: fit-content;
+  height: fit-content;
+  box-sizing: border-box;
+  display: block;
+}

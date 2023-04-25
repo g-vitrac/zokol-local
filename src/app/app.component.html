@@ -1,0 +1,17 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-toolbar color="primary">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      <app-svg-icon name="menu" size="small"></app-svg-icon>
+    </button>
+  </mat-toolbar>
+  <mat-drawer #drawer mode="side">
+    <h1>Menu</h1>
+    <mat-nav-list>
+      <a [routerLink]="''" (click)="drawer.toggle()">Proxy Managers</a>
+      <a [routerLink]="'keys'" (click)="drawer.toggle()">Cles 4G</a>
+      <a [routerLink]="'users'" (click)="drawer.toggle()">Utilisateurs</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <router-outlet></router-outlet>
+</mat-drawer-container>
+

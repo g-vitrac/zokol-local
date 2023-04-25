@@ -1,0 +1,43 @@
+
+:host{
+  height: 100%;
+}
+
+span{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.small svg{
+  width: 1rem;
+  height: 1rem;
+}
+
+svg{
+  height: 100%;
+  transition: all 1s;
+}
+
+svg > *	{
+  pointer-events: none;
+}
+
+svg line{
+  stroke: inherit;
+}
+
+svg:hover{
+  transform: scale(1.5);
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.red svg{
+  fill: red;
+  stroke: red;
+}
+
+.white svg{
+  fill: white;
+  stroke: white;
+}

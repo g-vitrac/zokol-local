@@ -1,0 +1,43 @@
+<div class="add-container">
+  Ajouter un hub <app-svg-icon name="plus" size="small"></app-svg-icon>
+</div>
+
+<table mat-table [dataSource]="devices">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.storage.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="imei">
+    <th mat-header-cell *matHeaderCellDef> IMEI </th>
+    <td mat-cell *matCellDef="let element"> {{element.storage.imei}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="port">
+    <th mat-header-cell *matHeaderCellDef> Proxy Manager Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.storage.hubId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="openPorts">
+    <th mat-header-cell *matHeaderCellDef> Partage </th>
+    <td mat-cell *matCellDef="let element"> {{element.storage.shared}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="openPorts">
+    <th mat-header-cell *matHeaderCellDef> Trafique maximal </th>
+    <td mat-cell *matCellDef="let element"> {{element.storage.trafMax}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element">
+      <div class="svg-container">
+        <app-svg-icon name="access_link" size="small" [routerLink]="'proxy/'+element.id"></app-svg-icon>
+        <app-svg-icon name="delete" size="small" color="red" ></app-svg-icon>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

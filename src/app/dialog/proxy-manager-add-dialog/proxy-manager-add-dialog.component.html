@@ -1,0 +1,25 @@
+<h1>Nouveau Hub</h1>
+<form>
+  <div [formGroup]="form">
+    <label for="ip">
+      <span>Ip :</span>
+      <input id="ip" type="text" placeholder="adresse ip" formControlName="ip"/>
+    </label>
+    <label for="port">
+      <span>Ip :</span>
+      <input id="port" type="text" placeholder="Port" formControlName="port"/>
+    </label>
+    <div formArrayName="openPorts">
+      <h2>Ports ouverts : </h2>
+      <label *ngFor="let openPort of openPorts.controls; let i=index" for="openPort-{{i}}">
+        <span>Port ouvert :</span>
+        <input id="openPort-{{i}}" type="number" placeholder="Port ouvert" [formControlName]="i"/>
+      </label>
+    </div>
+  </div>
+  <app-svg-icon name="plus" size="small" (click)="addOpenPort()"></app-svg-icon>
+  <div class="form-submit">
+    <button type="button" (click)="save()">Confirmer</button>
+    <button type="annuler" (click)="close()">Annuler</button>
+  </div>
+</form>

@@ -1,0 +1,36 @@
+
+:root{
+  --button-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --primary-color: #7b1fa2;
+  --secondary-color: #424142;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vw;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button{
+  border: none;
+  padding: 0.5rem;
+  color: black;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 1rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: var(--button-shadow);
+  box-sizing: border-box;
+}
+
+button:hover{
+  transform: scale(1.1);
+  color: white;
+  background-color: var(--primary-color);
+}
